@@ -1,21 +1,67 @@
-<!-- فایل: redirect.html -->
 <!DOCTYPE html>
-<html>
+<html lang="fa">
 <head>
-    <title>ربات هواشناسی فارس</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ربات هواشناسی فارس - بازوی بله</title>
     <meta http-equiv="refresh" content="0; url=bale://farsmet_bot">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 50px;
+            direction: rtl;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        a {
+            color: #ffeb3b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
     <script>
+        // تلاش برای باز کردن بله
         setTimeout(function() {
             window.location.href = 'bale://farsmet_bot';
         }, 100);
         
+        // اگر بله باز نشد، بعد از 2 ثانیه به لینک وب برو
         setTimeout(function() {
             window.location.href = 'https://ble.ir/farsmet_bot';
         }, 2000);
     </script>
 </head>
 <body>
-    <p>در حال انتقال به اپلیکیشن بله...</p>
-    <p>اگر انتقال انجام نشد، <a href="https://ble.ir/farsmet_bot">این لینک</a> را باز کنید.</p>
+    <div class="container">
+        <div class="loader"></div>
+        <h1>🌤️ در حال انتقال به ربات هواشناسی فارس</h1>
+        <p>لطفاً چند ثانیه صبر کنید...</p>
+        <p>اگر انتقال انجام نشد، <a href="https://ble.ir/farsmet_bot">این لینک</a> را باز کنید.</p>
+    </div>
 </body>
 </html>
